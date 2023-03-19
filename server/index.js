@@ -19,10 +19,7 @@ app.use(fileUpload({}))
 app.use('/api', router)
 app.use(errorHeandler)
 
-// app.get('/', (req, res) => {
-//     res.status(200).json({messaage:'WORKING!!!'})
-    
-// })
+
 
 
 
