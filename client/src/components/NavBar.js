@@ -6,20 +6,29 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
 import { SHOP_ROUTE } from "../utils/const";
 import {Button} from 'react-bootstrap';
-
-const NavBar = () => {
+import {observer} from 'mobx-react-lite'
+const NavBar = observer(() => {
     const {user} = useContext(Context)
     return (
 <Navbar bg="dark" variant="dark">
         <Container>
           <NavLink to={SHOP_ROUTE}> МагазИн</NavLink>
+          {user.isAuth ?
+          <Nav className="le-auto">
+            <Button>Log out</Button>
+            <Button>Admin panell</Button>
+
+          </Nav>
+          :
           <Nav className="le-auto">
             <Button>Autorization</Button>
 
           </Nav>
+          }
+
         </Container>
       </Navbar>
     )
-}
+})
 
 export default NavBar;
