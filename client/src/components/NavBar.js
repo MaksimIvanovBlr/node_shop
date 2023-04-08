@@ -21,7 +21,7 @@ const NavBar = observer(() => {
           </Nav>
           :
           <Nav className="le-auto">
-            <Button>Autorization</Button>
+            <Button  className="ml-2" variant={'outline-light'}>Autorization</Button>
 
           </Nav>
           }
