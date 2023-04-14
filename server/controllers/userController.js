@@ -14,7 +14,7 @@ const genereateJwt = (id, email, role) =>{
 
 class UserController {
 
-    async registration(req, res) {
+    async registration(req, res, next) {
         console.log(process.env.SECRET_KEY)
         const {email, password,role} = req.body
         if (!email || !password) {
