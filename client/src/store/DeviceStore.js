@@ -29,7 +29,7 @@ export default class DeviceStore{
     setTypes(types) {
         this._types = types
     }
-     setBreands(brands){
+     setBrands(brands){
         this._brands = brands
      }
      setDevices(devices){
